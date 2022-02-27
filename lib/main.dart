@@ -28,7 +28,10 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('플러터 위젯'),
         ),
-        body: Column(
+        body: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
                 color: Colors.yellow,
