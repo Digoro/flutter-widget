@@ -28,10 +28,7 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('플러터 위젯'),
         ),
-        body: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        body: Stack(
           children: [
             Container(
                 color: Colors.yellow,
@@ -41,14 +38,14 @@ class MyHomePage extends StatelessWidget {
                 margin: const EdgeInsets.all(8.0)),
             Container(
                 color: Colors.black,
-                width: 100,
-                height: 100,
+                width: 80,
+                height: 80,
                 padding: const EdgeInsets.all(8.0),
                 margin: const EdgeInsets.all(8.0)),
             Container(
                 color: Colors.purple,
-                width: 100,
-                height: 100,
+                width: 60,
+                height: 60,
                 padding: const EdgeInsets.all(8.0),
                 margin: const EdgeInsets.all(8.0)),
           ],
