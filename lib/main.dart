@@ -24,31 +24,12 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final items = List.generate(100, (i) => i).toList();
     return Scaffold(
         appBar: AppBar(
           title: const Text('플러터 위젯'),
         ),
-        body: Stack(
-          children: [
-            Container(
-                color: Colors.yellow,
-                width: 100,
-                height: 100,
-                padding: const EdgeInsets.all(8.0),
-                margin: const EdgeInsets.all(8.0)),
-            Container(
-                color: Colors.black,
-                width: 80,
-                height: 80,
-                padding: const EdgeInsets.all(8.0),
-                margin: const EdgeInsets.all(8.0)),
-            Container(
-                color: Colors.purple,
-                width: 60,
-                height: 60,
-                padding: const EdgeInsets.all(8.0),
-                margin: const EdgeInsets.all(8.0)),
-          ],
-        ));
+        body: SingleChildScrollView(
+            child: ListBody(children: items.map((i) => Text('$i')).toList())));
   }
 }
