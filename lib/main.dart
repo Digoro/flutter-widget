@@ -28,30 +28,11 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('플러터 위젯'),
         ),
-        body: GridView.count(
-          crossAxisCount: 2,
-          children: <Widget>[
-            Container(
-              color: Colors.red,
-              width: 100,
-              height: 100,
-              padding: const EdgeInsets.all(8.0),
-              margin: const EdgeInsets.all(8.0),
-            ),
-            Container(
-              color: Colors.green,
-              width: 100,
-              height: 100,
-              padding: const EdgeInsets.all(8.0),
-              margin: const EdgeInsets.all(8.0),
-            ),
-            Container(
-              color: Colors.yellow,
-              width: 100,
-              height: 100,
-              padding: const EdgeInsets.all(8.0),
-              margin: const EdgeInsets.all(8.0),
-            ),
+        body: PageView(
+          children: [
+            Container(color: Colors.red),
+            Container(color: Colors.blue),
+            Container(color: Colors.black)
           ],
         ));
   }
