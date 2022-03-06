@@ -24,27 +24,12 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-          appBar: AppBar(
-            title: const Text('플러터 위젯'),
-            bottom: const TabBar(tabs: [
-              Tab(icon: Icon(Icons.tag_faces)),
-              Tab(text: '메뉴'),
-              Tab(
-                icon: Icon(Icons.info),
-                text: '메뉴2',
-              )
-            ]),
-          ),
-          body: TabBarView(
-            children: [
-              Container(color: Colors.yellow),
-              Container(color: Colors.orange),
-              Container(color: Colors.red),
-            ],
-          )),
+    return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: '홈'),
+        BottomNavigationBarItem(icon: Icon(Icons.notifications), label: '알람'),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: '프로필'),
+      ]),
     );
   }
 }
