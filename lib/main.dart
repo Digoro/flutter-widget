@@ -28,27 +28,30 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('플러터 위젯'),
         ),
-        body: ListView(
-          scrollDirection: Axis.vertical,
+        body: GridView.count(
+          crossAxisCount: 2,
           children: <Widget>[
-            ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('홈'),
-              trailing: const Icon(Icons.navigate_next),
-              onTap: () {},
+            Container(
+              color: Colors.red,
+              width: 100,
+              height: 100,
+              padding: const EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
             ),
-            ListTile(
-              leading: const Icon(Icons.event),
-              title: const Text('이벤트'),
-              trailing: const Icon(Icons.navigate_next),
-              onTap: () {},
+            Container(
+              color: Colors.green,
+              width: 100,
+              height: 100,
+              padding: const EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
             ),
-            ListTile(
-              leading: const Icon(Icons.camera),
-              title: const Text('카메라'),
-              trailing: const Icon(Icons.navigate_next),
-              onTap: () {},
-            )
+            Container(
+              color: Colors.yellow,
+              width: 100,
+              height: 100,
+              padding: const EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
+            ),
           ],
         ));
   }
