@@ -24,12 +24,32 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final items = List.generate(100, (i) => i).toList();
     return Scaffold(
         appBar: AppBar(
           title: const Text('플러터 위젯'),
         ),
-        body: SingleChildScrollView(
-            child: ListBody(children: items.map((i) => Text('$i')).toList())));
+        body: ListView(
+          scrollDirection: Axis.vertical,
+          children: <Widget>[
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('홈'),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.event),
+              title: const Text('이벤트'),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.camera),
+              title: const Text('카메라'),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {},
+            )
+          ],
+        ));
   }
 }
